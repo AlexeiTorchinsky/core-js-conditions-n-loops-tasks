@@ -173,7 +173,7 @@ function convertNumberToString(/* numberStr */) {
   //   9: 'nine'
   // };
   // if (numberStr.length === 1) {
-  //   result = 
+  //   result =
   // }
 }
 
