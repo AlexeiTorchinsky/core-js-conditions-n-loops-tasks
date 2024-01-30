@@ -159,22 +159,6 @@ function convertToRomanNumerals(num) {
  */
 function convertNumberToString(/* numberStr */) {
   throw new Error('Not implemented');
-  // let result;
-  // const numbers = {
-  //   0: 'zero',
-  //   1: 'one',
-  //   2: 'two',
-  //   3: 'three',
-  //   4: 'four',
-  //   5: 'five',
-  //   6: 'six',
-  //   7: 'seven',
-  //   8: 'eight',
-  //   9: 'nine'
-  // };
-  // if (numberStr.length === 1) {
-  //   result =
-  // }
 }
 
 /**
@@ -207,8 +191,13 @@ function isPalindrome(/* str */) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] === letter) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 /**
@@ -226,8 +215,16 @@ function getIndexOf(/* str, letter */) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
-  throw new Error('Not implemented');
+function isContainNumber(num, digit) {
+  let num1 = num;
+  while (num1) {
+    const lastDigit = num1 % 10;
+    if (lastDigit === digit) {
+      return true;
+    }
+    num1 = Math.floor(num1 / 10);
+  }
+  return false;
 }
 
 /**
